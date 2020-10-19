@@ -16,7 +16,7 @@ public class Main {
             int seconddigit = (number / 10) % 10;
             int thirddigit = (number / 100) % 10;
 
-            if ( establishCondition(firstdigit, seconddigit,thirddigit)) {
+            if ( readCondition(firstdigit, seconddigit, thirddigit)) {
                 quantity += 1;
                 number++;
             } else {
@@ -26,7 +26,7 @@ public class Main {
         return quantity;
     }
 
-    static boolean  establishCondition(int firstdigit, int seconddigit, int thirddigit) {
+    static boolean  readCondition(int firstdigit, int seconddigit, int thirddigit) {
         return (seconddigit - firstdigit >= 3 && thirddigit - seconddigit > 3) ||
                 (firstdigit - seconddigit >= 3 && seconddigit - thirddigit > 3) ||
                 (seconddigit - firstdigit >= 3 && seconddigit - thirddigit >= 3) ||
