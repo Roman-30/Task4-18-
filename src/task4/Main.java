@@ -4,21 +4,23 @@ public class Main {
 
     public static void main(String[] args) {
         int number = 100;
-        int quantity = iterateOverNumbers(number);
+        int quantity = chooseAndCountNumbers(number);
 
         printAnswer(quantity);
     }
 
-    public static int iterateOverNumbers(int number) {
+    public static  int chooseAndCountNumbers(int number) {
         int quantity = 0;
-        while (number <= 999) {
-            int firstdigit = number % 10;
-            int seconddigit = (number / 10) % 10;
-            int thirddigit = (number / 100) % 10;
 
-            if ( establishCondition(firstdigit, seconddigit,thirddigit)) {
+        while (number <= 999 & number >= 100) {
+            int firstDigit = number % 10;
+            int secondDigit = (number / 10) % 10;
+            int thirdDigit = (number / 100) % 10;
+
+            if ( establishCondition(firstDigit, secondDigit, thirdDigit)) {
                 quantity += 1;
                 number++;
+
             } else {
                 number++;
             }
@@ -26,11 +28,11 @@ public class Main {
         return quantity;
     }
 
-    static boolean  establishCondition(int firstdigit, int seconddigit, int thirddigit) {
-        return (seconddigit - firstdigit >= 3 && thirddigit - seconddigit > 3) ||
-                (firstdigit - seconddigit >= 3 && seconddigit - thirddigit > 3) ||
-                (seconddigit - firstdigit >= 3 && seconddigit - thirddigit >= 3) ||
-                (firstdigit - seconddigit >= 3 && thirddigit - seconddigit >= 3);
+    static boolean  establishCondition(int firstDigit, int secondDigit, int thirdDigit) {
+        return (secondDigit - firstDigit >= 3 && thirdDigit - secondDigit > 3) ||
+                (firstDigit - secondDigit >= 3 && secondDigit - thirdDigit > 3) ||
+                (secondDigit - firstDigit >= 3 && secondDigit - thirdDigit >= 3) ||
+                (firstDigit - secondDigit >= 3 && thirdDigit - secondDigit >= 3);
     }
 
     public static void printAnswer(int quantity) {
