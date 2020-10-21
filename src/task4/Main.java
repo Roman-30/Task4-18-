@@ -17,7 +17,7 @@ public class Main {
             int secondDigit = (number / 10) % 10;
             int thirdDigit = (number / 100) % 10;
 
-            if (mustDo(firstDigit, secondDigit, thirdDigit) ) {
+            if (assignСorrectСondition(firstDigit, secondDigit, thirdDigit) ) {
                 quantity += 1;
                 number++;
 
@@ -29,7 +29,7 @@ public class Main {
     }
 
 
-    static boolean  mustDo(int firstDigit, int secondDigit, int thirdDigit) {
+    static boolean  assignСorrectСondition(int firstDigit, int secondDigit, int thirdDigit) {
         return (secondDigit - firstDigit >= 3 && thirdDigit - secondDigit > 3) ||
                 (firstDigit - secondDigit >= 3 && secondDigit - thirdDigit > 3) ||
                 (secondDigit - firstDigit >= 3 && secondDigit - thirdDigit >= 3) ||
