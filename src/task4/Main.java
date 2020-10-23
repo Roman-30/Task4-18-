@@ -19,7 +19,11 @@ public class Main {
             int secondDigit = (infimumNumber / 10) % 10;
             int thirdDigit = (infimumNumber / 100) % 10;
 
+<<<<<<< HEAD
             if (checkCondition(firstDigit, secondDigit, thirdDigit)) {
+=======
+            if (assignСorrectСondition(firstDigit, secondDigit, thirdDigit) ) {
+>>>>>>> 5092983e012881e37747934090993b86f4bbae88
                 quantity += 1;
             }
             infimumNumber++;
@@ -28,7 +32,11 @@ public class Main {
     }
 
 
+<<<<<<< HEAD
     static boolean checkCondition(int firstDigit, int secondDigit, int thirdDigit) {
+=======
+    static boolean  assignСorrectСondition(int firstDigit, int secondDigit, int thirdDigit) {
+>>>>>>> 5092983e012881e37747934090993b86f4bbae88
         return (secondDigit - firstDigit >= 3 && thirdDigit - secondDigit > 3) ||
                 (firstDigit - secondDigit >= 3 && secondDigit - thirdDigit > 3) ||
                 (secondDigit - firstDigit >= 3 && secondDigit - thirdDigit >= 3) ||
