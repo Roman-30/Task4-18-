@@ -11,18 +11,18 @@ public class Main {
         printAnswer(outcome);
     }
 
-    public static int calculateQuantityNumbers(int infimuNumber, int supremuNumber) {
+    public static int calculateQuantityNumbers(int infimumNumber, int supremumNumber) {
         int quantity = 0;
 
-        while (infimuNumber <= supremuNumber) {
-            int firstDigit = infimuNumber % 10;
-            int secondDigit = (infimuNumber / 10) % 10;
-            int thirdDigit = (infimuNumber / 100) % 10;
+        while (infimumNumber <= supremumNumber) {
+            int firstDigit = infimumNumber % 10;
+            int secondDigit = (infimumNumber / 10) % 10;
+            int thirdDigit = (infimumNumber / 100) % 10;
 
             if (checkCondition(firstDigit, secondDigit, thirdDigit)) {
                 quantity += 1;
             }
-            infimuNumber++;
+            infimumNumber++;
         }
         return quantity;
     }
