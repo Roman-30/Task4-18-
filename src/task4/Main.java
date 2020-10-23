@@ -11,37 +11,27 @@ public class Main {
         printAnswer(outcome);
     }
 
-    public static int calculateQuantityNumbers(int infimumNumber, int supremumNumber) {
+    public static int calculateQuantityNumbers(int infimuNumber, int supremuNumber) {
         int quantity = 0;
 
-        while (infimumNumber <= supremumNumber) {
-            int firstDigit = infimumNumber % 10;
-            int secondDigit = (infimumNumber / 10) % 10;
-            int thirdDigit = (infimumNumber / 100) % 10;
+        while (infimuNumber <= supremuNumber) {
+            int firstDigit = infimuNumber % 10;
+            int secondDigit = (infimuNumber / 10) % 10;
+            int thirdDigit = (infimuNumber / 100) % 10;
 
-<<<<<<< HEAD
             if (checkCondition(firstDigit, secondDigit, thirdDigit)) {
-=======
-            if (assignСorrectСondition(firstDigit, secondDigit, thirdDigit) ) {
->>>>>>> 5092983e012881e37747934090993b86f4bbae88
                 quantity += 1;
             }
-            infimumNumber++;
+            infimuNumber++;
         }
         return quantity;
     }
 
-
-<<<<<<< HEAD
     static boolean checkCondition(int firstDigit, int secondDigit, int thirdDigit) {
-=======
-    static boolean  assignСorrectСondition(int firstDigit, int secondDigit, int thirdDigit) {
->>>>>>> 5092983e012881e37747934090993b86f4bbae88
         return (secondDigit - firstDigit >= 3 && thirdDigit - secondDigit > 3) ||
                 (firstDigit - secondDigit >= 3 && secondDigit - thirdDigit > 3) ||
                 (secondDigit - firstDigit >= 3 && secondDigit - thirdDigit >= 3) ||
                 (firstDigit - secondDigit >= 3 && thirdDigit - secondDigit >= 3);
-
     }
 
     public static void printAnswer(int outcome) {
